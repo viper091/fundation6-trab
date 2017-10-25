@@ -1,0 +1,62 @@
+
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+
+<div class="callout alert">
+    <h5>Ola</h5>
+    <p>Ocorreu em nosso site, nossos dev's estão trabalhando na correção</p>
+    <p>Volte novamante mais tarde</p>
+    <p id="msg"></p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div>
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function delete_cookie( name ) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
+    $(document).ready(function ($) {
+
+        $cookie = getCookie('msg');
+        if($cookie.length > 0){
+            $('#msg').html($cookie);
+            delete_cookie('msg');
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -23,12 +23,24 @@ body.loading {
     overflow: hidden;
 }
 
-.pesquisa
-{
-    display:none;
-}
 /* Anytime the body has the loading class, our
    modal element will be visible */
 body.loading .modal {
     display: block;
+}
+
+#nada_encontrado
+{
+
+    display:none;
+}
+
+#pesquisar{
+
+    z-index: 1;
+}
+
+#resultado{
+
+    display:none;
 }

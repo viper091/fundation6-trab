@@ -17,7 +17,7 @@
 
     <div class="callout">
 
-        <form>
+
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
                     <div class="medium-12 cell">
@@ -26,46 +26,60 @@
                         </label>
 
                     </div>
-                    <div class="medium-6 cell large-offset-6 cell">
-                      <button id="buscar" type="button" class="button">Buscar</button>
+                    <div class="medium-1 cell large-offset-6 cell">
+                        <button id="buscar" type="button" class="button">Buscar</button>
+                    </div>
+
+                    <div class="medium-1 cell large-offset-11 cell">
+                        <p style="font-size: 11px">Resultados  <b id="resultados"> 0 </b></p>
+
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
 
+    </div>
 
 
     <div class="pesquisa">
 
-        <table>
+        <table id="resultado">
             <thead>
             <tr>
-                <th width="200">Table Header</th>
-                <th>Table Header</th>
-                <th width="150">Table Header</th>
-                <th width="150">Table Header</th>
+                <th width="100"></th>
+                <th width="100">Nome</th>
+                <th width="100">Origem</th>
+                <th width="100">Tipo</th>
+
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Content Goes Here</td>
-                <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-                <td>Content Goes Here</td>
-                <td>Content Goes Here</td>
-            </tr>
+
 
             </tbody>
         </table>
 
+        <div class="grid-container" id="resultado">
+
+        </div>
+
+        <div id="nada_encontrado" class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="medium-12 cell">
+                    <h3>Nada encontrado</h3>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
     <div class="modal"><!-- Place at bottom of page --></div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
 
-    <script src="app/indexjs.js"></script>
+    <script src="app/index.js"></script>
 
 
   </body>

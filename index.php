@@ -9,7 +9,6 @@
     <title>Mundo aviação</title>
     <link rel="stylesheet" href="css/foundation.min.css">
 
-
       <link rel="stylesheet" href="app/style.css">
   </head>
   <body>
@@ -40,11 +39,13 @@
     </div>
 
 
+
+
     <div class="pesquisa">
 
-        <table id="resultado">
+        <table id="resultado" class="table-expand">
             <thead>
-            <tr>
+            <tr class="table-expand-row">
                 <th width="100"></th>
                 <th width="100">Nome</th>
                 <th width="100">Origem</th>
@@ -74,12 +75,18 @@
 
 
 
+
+    <?php include 'footer.php'; ?>
+
     <div class="modal"><!-- Place at bottom of page --></div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
 
+
     <script src="app/index.js"></script>
+
+
 
 
   </body>

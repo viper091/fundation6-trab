@@ -29,7 +29,7 @@ CREATE TABLE `airplanes` (
   `img` varchar(50) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `airplanes` (
 
 LOCK TABLES `airplanes` WRITE;
 /*!40000 ALTER TABLE `airplanes` DISABLE KEYS */;
-INSERT INTO `airplanes` VALUES (1,'Boeing 747','Estados Unidos','boeing747.jpg','Transporte de passageiros/Transporte de carga'),(2,'Airbus A380','Alemanha','AirbusA380.jpg','Avião comercial turbofan quadrimotor'),(3,'Antonov An-225 Mriya','União Soviética','An-225Mriya.jpg','Avião cargueiro tático turbofan hexamotor'),(6,'Cessna 172 Skyhawk','Estados Unidos','','Avião de treinamento civil'),(7,'Embraer EMB-314 \"Super Tucano','Brasil','','Aeronave de ataque leve<br> e treinamento avançado');
+INSERT INTO `airplanes` VALUES (1,'Boeing 747','Estados Unidos','boeing747.jpg','Transporte de passageiros/Transporte de carga'),(2,'Airbus A380','Alemanha','AirbusA380.jpg','Avião comercial turbofan quadrimotor'),(3,'Antonov An-225 Mriya','União Soviética','An-225Mriya.jpg','Avião cargueiro tático turbofan hexamotor'),(6,'Cessna 172','Estados Unidos','','Avião de treinamento civil'),(7,'Embraer EMB 314 Super Tucano','Brasil','','Aeronave de ataque leve<br> e treinamento avançado'),(8,'Cessna 150','Estados Unidos','','aviao civil/monomotor'),(9,'Cessna 140','Estados Unidos','','aviao civil/monomotor'),(10,'Cessna CitationJet/M2','Estados Unidos','','jato empresarialairplanes');
 /*!40000 ALTER TABLE `airplanes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-31  1:09:37
+-- Dump completed on 2017-10-31 22:00:23

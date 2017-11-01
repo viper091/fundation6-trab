@@ -3,7 +3,78 @@
  */
 $body = $("body");
 var aaa;
+function clean(filename) {
+    filename= filename.split(/[^a-zA-Z0-9\-\_\.]/gi).join('_');
+    return filename;
+};
+function wikipediadata(id,nome){
 
+    var wikiURL = "https://pt.wikipedia.org/w/api.php";
+    wikiURL += '?' + $.param({
+            'action' : 'opensearch',
+            'search' : nome,
+            'prop'  : 'revisions',
+            'rvprop' : 'content',
+            'rvsection' : '1',
+            'rvlimit' : '1',
+            'format' : 'json',
+            'limit' : 1
+        });
+     wikiURL = "https://en.wikipedia.org/w/api.php";
+    wikiURL += '?' + $.param({
+            'action' : 'query',
+            'titles' : nome,
+            'prop'  : 'extracts',
+            'explaintext' : '0',
+            'exintro' : '1',
+            'format' : 'json'
+        });
+    aaa = wikiURL;
+    $.ajax( {
+        url: wikiURL,
+        dataType: 'jsonp',
+        async: true,
+        success: function(data) {
+            for( var page in data.query.pages)
+            $('#'+id).html(data.query.pages[page].extract);
+            //alert(id);
+        //    alert(data.query.pages[page].extract);
+         ///   aaa = data;
+
+        }
+    } );
+
+    wikiURL = "https://en.wikipedia.org/w/api.php";
+    wikiURL += '?' + $.param({
+            'action' : 'query',
+            'titles' : nome,
+            'prop'  : 'pageimages',
+            'format' : 'json',
+            'pithumbsize' : '100'
+        });
+    aaa = wikiURL;
+    $.ajax( {
+        url: wikiURL,
+        dataType: 'jsonp',
+        async: true,
+        success: function(data) {
+            var el =  $('#'+id+'s');
+            //$('#'+id+'s').attr("src",data);
+            if($(el).length) {
+                for (var page in data.query.pages) {
+                    if(page && data.query.pages[page].thumbnail)
+                    el.attr('src', data.query.pages[page].thumbnail['source']);
+
+                    //     alert(data.query.pages[page].thumbnail['source']);
+                }
+            }
+                //alert(id);
+            //    alert(data.query.pages[page].extract);
+              aaa = data;
+
+        }
+    } );
+}
 
 function showResults(response) {
 
@@ -22,60 +93,30 @@ function showResults(response) {
 
 
         var aero = response[i];
-        var nname = aero.nome.replace(/ /g,'')
-
-
-        var wikiURL = "https://en.wikipedia.org/w/api.php";
-        wikiURL += '?' + $.param({
-                'action' : 'opensearch',
-                'search' : aero.nome,
-                'prop'  : 'text',
-                'rvprop' : 'content',
-                'format' : 'json',
-                'limit' : 1
-            });
-
-        $.ajax( {
-            url: wikiURL,
-            dataType: 'jsonp',
-            async: true,
-            success: function(data) {
-                //  $('#'+nname).html(data[2]);
-                var wikiinfo = "<tr>" +
-
-                    "<td >" + data[2] + "</td>" +
-                    "<td></td>"
-                    +
-                    "<td></td>" +
-                    "<td></td>" +
-                    "</tr>";
-
-
-
-               // $('#' + nname).before(). append('aa');
-
-                aaa = data;
-
-
-            }
-        } );
+        //var nname = aero.nome.replace(/ /g,'')
+        var nname = clean(aero.nome);
 
         var img="";
         if(aero.img.length == 0) {
-            img = "<img height='140' width='190' src='./imgs/airplanes/not_found.jpg'></img>";
+
+            img = "<img id='"+nname+'s'+"' height='140' width='190' src='./imgs/airplanes/not_found.jpg'></img>";
+
         }
         else img =  "<img height='140' width='190' src='./imgs/airplanes/"+aero.img+"'></img>";
-        $('#resultado tbody').append(" <tr id='"+ nname + "'>" +
+        $('#resultado tbody').append(" <tr class='table-expand-row' data-open-details>" +
             "<td>"+img+"</td>" +
             "<td>"+aero.nome+"</td>" +
             "<td>"+aero.origem+"</td>" +
-            "<td>"+aero.tipo+"</td>" +
+            "<td>"+aero.tipo+"<span class='expand-icon'></span></td>" +
+
+            "</tr>" +
+           "<tr class='table-expand-row-content'>"+
+            "<td colspan='8' class='table-expand-row-nested' id='"+ nname  +"'></td>" +
             "</tr>"
 
         );
 
-
-
+        wikipediadata(nname,aero.nome);
 
     }
 }
@@ -83,6 +124,8 @@ function showResults(response) {
 
 
 $(document).ready(function() {
+
+
 
     $('#buscar').click(function () {
 
@@ -109,6 +152,7 @@ $(document).ready(function() {
             success: function (response) {
           //      location.reload();
                 //console.log(response);
+
                 showResults(response);
             }
 
@@ -129,5 +173,15 @@ $(document).ready(function() {
 
 $(document).on({
     ajaxStart: function() { $body.addClass("loading");    },
-    ajaxStop: function() { $body.removeClass("loading"); }
+    ajaxStop: function() {
+
+        $('[data-open-details]').click(function (e) {
+            e.preventDefault();
+            $(this).next().toggleClass('is-active');
+            $(this).toggleClass('is-active');
+        });
+        $body.removeClass("loading"); }
+
+
+
 });

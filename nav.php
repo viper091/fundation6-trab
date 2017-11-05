@@ -7,8 +7,7 @@
  */
 
 ?>
-<div data-sticky-container>
-    <div data-sticky data-options="marginTop:0;">
+
 
 <div class="top-bar">
     <div class="top-bar-left">
@@ -17,11 +16,8 @@
 
             <li><a href="index.php">Home</a></li>
             <li><a href="flightradar.php">FlightRadar24</a></li>
-            <li><a href="#">Historias</a></li>
-            <li><a href="#">Sobre</a></li>
-        </ul>
-    </div>
-</div>
 
+
+        </ul>
     </div>
 </div>

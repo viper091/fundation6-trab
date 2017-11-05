@@ -1,6 +1,7 @@
 /**
  * Created by VitorEmanuel on 24/10/2017.
  */
+$(document).foundation();
 $body = $("body");
 var aaa;
 function clean(filename) {
@@ -79,7 +80,7 @@ function wikipediadata(id,nome){
 function showResults(response) {
 
     $('#resultado tbody').find('tr,p').remove();
-    $('#resultado').show();
+//    $('#resultado').show();
     $('#nada_encontrado').hide();
 
     if(response.length == 0){
@@ -89,6 +90,10 @@ function showResults(response) {
         return false;
     }
     $('#resultados').html(response.length);
+    var nn = 0;
+    if(response.length > 1)
+     nn = Math.floor(Math.random() * response.length-1);
+
     for(var i =0; i<response.length; i++){
 
 
@@ -116,8 +121,13 @@ function showResults(response) {
 
         );
 
+        if(i == nn)
+        {
+            changeBackground(aero.nome);
+        }
         wikipediadata(nname,aero.nome);
 
+        $('#resultado').fadeIn(1000);
     }
 }
 
@@ -127,9 +137,10 @@ $(document).ready(function() {
 
 
 
+
     $('#buscar').click(function () {
 
-
+        $('#resultados').text('0');
 
         var data = {
             nome: $('#nome').val()
@@ -170,6 +181,41 @@ $(document).ready(function() {
 
 });
 
+function changeBackground(nome){
+
+    wikiURL = "https://en.wikipedia.org/w/api.php";
+    wikiURL += '?' + $.param({
+            'action' : 'query',
+            'titles' : nome,
+            'prop'  : 'pageimages',
+            'format' : 'json',
+            'pithumbsize' :'1000'
+        });
+    aaa = wikiURL;
+    $.ajax( {
+        url: wikiURL,
+        dataType: 'jsonp',
+        async: true,
+        success: function(data) {
+            for (var page in data.query.pages) {
+                if (page && data.query.pages[page].thumbnail) {
+                   var imgurl = data.query.pages[page].thumbnail['source'];
+                    aaa =  data.query.pages[page];
+                   $('.callout').css('background','url(' + imgurl + ')' );
+                   $('.callout').css('background-size','cover');
+                    $('.callout').css('background-position','center');
+                    $('.callout').css('background-repeat','no-repeat');
+
+
+                }
+                //     alert(data.query.pages[page].thumbnail['source']);
+            }
+
+
+        }
+    } );
+}
+
 
 $(document).on({
     ajaxStart: function() { $body.addClass("loading");    },
@@ -180,8 +226,24 @@ $(document).on({
             $(this).next().toggleClass('is-active');
             $(this).toggleClass('is-active');
         });
-        $body.removeClass("loading"); }
+        $body.removeClass("loading");
+
+    }
+
 
 
 
 });
+/*
+$('tr').hover( function(){
+    if( $(this).hasClass('jaf')) return false;
+    //    alert($(this).attr('id'));
+    // $('table tr td:nth-child('+ownerIndex+')')
+    var airname = $(this).children(1)[1].innerText;
+    if(airname.length < 3) return false;
+    console.log(airname);
+
+    $(this).addClass('jaf');
+    changeBackground(airname);
+
+});*/

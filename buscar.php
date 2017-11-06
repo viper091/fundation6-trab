@@ -12,11 +12,11 @@ $name = $_POST['nome'] ;
 
 if(isset($name)){
 
-    $stmt = $conn->prepare("SELECT * from airplanes where nome  LIKE CONCAT('%', :name,'%')  or tipo LIKE CONCAT('%', :nam,'%') or origem LIKE CONCAT('%', :na,'%') ");
+    $stmt = $conn->prepare("SELECT * from airplanes where nome  LIKE CONCAT('%', :name,'%')  or tipo LIKE CONCAT('%', :name2,'%') or origem LIKE CONCAT('%', :name3,'%') ");
 
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    $stmt->bindParam(':nam', $name, PDO::PARAM_STR);
-    $stmt->bindParam(':na', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':name2', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':name3', $name, PDO::PARAM_STR);
     $stmt->execute();
     $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

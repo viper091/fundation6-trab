@@ -3,7 +3,7 @@
 
     $stmt = $conn->prepare('select * from airplanes');
     $stmt->execute();
-    $res = $stmt->fetchAl();
+    $res = $stmt->fetchAll();
     print_r($res);
 
 ?>

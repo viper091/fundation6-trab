@@ -20,7 +20,7 @@
   </head>
   <body>
     <?php include 'nav.php' ?>
-
+<!--
     <div class="reveal" id="exampleModal1" data-reveal>
         <h1>Awesome. I Have It.</h1>
         <p class="lead">Your couch. It is mine.</p>
@@ -30,6 +30,7 @@
         </button>
     </div>
     <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p>
+    -->
 	<div class="callout">
 		<!-- <h4>Ferramente de busca de aeronave</h4> -->
 

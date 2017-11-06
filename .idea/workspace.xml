@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="448ea261-f6f0-4f99-9c3e-99ac5dd4e269" name="Default" comment="vitor">
+    <list default="true" id="448ea261-f6f0-4f99-9c3e-99ac5dd4e269" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.user.ini" afterPath="$PROJECT_DIR$/.user.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.js" afterPath="$PROJECT_DIR$/app/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buscar.php" afterPath="$PROJECT_DIR$/buscar.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".user.ini" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".user.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.user.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -63,15 +62,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buscar.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="buscar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buscar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding>
-                <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-                <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-                <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
+                <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+                <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+                <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+                <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
               </folding>
             </state>
           </provider>
@@ -164,11 +164,11 @@
         <option value="$PROJECT_DIR$/flightradar.php" />
         <option value="$PROJECT_DIR$/app/style.css" />
         <option value="$PROJECT_DIR$/nav.php" />
-        <option value="$PROJECT_DIR$/buscar.php" />
         <option value="$PROJECT_DIR$/db.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/app/index.js" />
         <option value="$PROJECT_DIR$/.user.ini" />
+        <option value="$PROJECT_DIR$/buscar.php" />
       </list>
     </option>
   </component>
@@ -368,7 +368,7 @@
       <workItem from="1509481489734" duration="10596000" />
       <workItem from="1509745110599" duration="2631000" />
       <workItem from="1509850641485" duration="7612000" />
-      <workItem from="1509921144408" duration="6633000" />
+      <workItem from="1509921144408" duration="7480000" />
     </task>
     <task id="LOCAL-00001" summary="vitor">
       <created>1509930353095</created>
@@ -412,11 +412,25 @@
       <option name="project" value="LOCAL" />
       <updated>1509931794411</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vitor">
+      <created>1509932195692</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1509932195692</updated>
+    </task>
+    <task id="LOCAL-00008" summary="vitor">
+      <created>1509932497598</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1509932497598</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60259000" />
+    <option name="totallyTimeSpent" value="61106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -509,9 +523,10 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
           </folding>
         </state>
       </provider>
@@ -562,9 +577,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="23" />
           <folding>
-            <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
           </folding>
         </state>
       </provider>
@@ -615,9 +631,10 @@
         <state relative-caret-position="119">
           <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
           </folding>
         </state>
       </provider>
@@ -661,9 +678,10 @@
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
           </folding>
         </state>
       </provider>
@@ -707,9 +725,10 @@
         <state relative-caret-position="289">
           <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
-            <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
           </folding>
         </state>
       </provider>
@@ -838,18 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buscar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding>
-            <marker date="1509929064856" expanded="true" signature="188:236" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:251" ph="SELECT * fro... airplanes" />
-            <marker date="1509929064856" expanded="true" signature="188:326" ph="SELECT * fro... airplanes" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -881,6 +888,19 @@
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buscar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <marker date="1509933033842" expanded="true" signature="206:254" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:269" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="206:344" ph="SELECT * fro... airplanes" />
+            <marker date="1509933033842" expanded="true" signature="354:404" ph="SELECT * fro... airplanes" />
+          </folding>
         </state>
       </provider>
     </entry>

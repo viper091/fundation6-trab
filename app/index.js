@@ -157,7 +157,7 @@ $(document).ready(function() {
             method:'post',
             dataType:'json',
             contentType: "application/json;charset=UTF-8",
-            url: 'buscar.php',
+            url: 'http://mundoaviacao.azurewebsites.net/buscar.php',
             async: true,
             data: JSON.stringify(data),
             success: function (response) {

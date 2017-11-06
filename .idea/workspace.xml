@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="179">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
                 <element signature="e#802#809#0#HTML" expanded="true" />
               </folding>
@@ -155,6 +155,7 @@
         <option value="$PROJECT_DIR$/nav.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/app/index.js" />
+        <option value="$PROJECT_DIR$/db.php" />
       </list>
     </option>
   </component>
@@ -354,12 +355,12 @@
       <workItem from="1509481489734" duration="10596000" />
       <workItem from="1509745110599" duration="2631000" />
       <workItem from="1509850641485" duration="7612000" />
-      <workItem from="1509921144408" duration="1394000" />
+      <workItem from="1509921144408" duration="1634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55020000" />
+    <option name="totallyTimeSpent" value="55260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -791,14 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dados.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -826,10 +819,18 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding>
             <element signature="e#802#809#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

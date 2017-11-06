@@ -5,26 +5,61 @@
  * Date: 24/10/2017
  * Time: 18:29
  */
+$local = false;
+
 $showerrors = true;
-$servername = "localhost";
-$username = "root";
-$password = "vitor";
-$dbname = "trabDB";
-
 $conn = null;
-try{
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,
-        $password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
+if($local) {
 
-}
-catch(PDOException $ex)
-{
-    if($showerrors) {
-        $msg = $ex->getMessage();
-        setcookie('msg', $msg);
+    /* local */
+    $servername = "localhost";
+    $username = "root";
+    $password = "vitor";
+    $dbname = "trabDB";
+
+    try{
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,
+            $password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
 
     }
-    header("Location: error.html");
+    catch(PDOException $ex)
+    {
+        if($showerrors) {
+            $msg = $ex->getMessage();
+            setcookie('msg', $msg);
 
-    die();
+        }
+        header("Location: error.html");
+
+        die();
+    }
+
 }
+else{
+
+    /* azure */
+    $servername = "mundoaviacao.database.windows.net";
+    $username = "vitor";
+    $password = "30221505aA@";
+    $dbname = "mundoaviacao";
+
+    try{
+        $conn = new PDO(" sqlsrv:server=$servername;Database=$dbname",$username,
+            $password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
+
+    }
+    catch(PDOException $ex)
+    {
+        if($showerrors) {
+            $msg = $ex->getMessage();
+            setcookie('msg', $msg);
+
+        }
+        header("Location: error.html");
+
+        die();
+    }
+
+
+}
+

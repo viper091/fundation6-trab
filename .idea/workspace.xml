@@ -30,9 +30,11 @@
       <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+              <folding>
+                <element signature="e#6#94#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -249,7 +251,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -355,15 +357,15 @@
       <workItem from="1509481489734" duration="10596000" />
       <workItem from="1509745110599" duration="2631000" />
       <workItem from="1509850641485" duration="7612000" />
-      <workItem from="1509921144408" duration="2230000" />
+      <workItem from="1509921144408" duration="2497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55856000" />
+    <option name="totallyTimeSpent" value="56123000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14800614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -828,9 +830,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

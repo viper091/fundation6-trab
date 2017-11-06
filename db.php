@@ -5,6 +5,8 @@
  * Date: 24/10/2017
  * Time: 18:29
  */
+
+
 $local = false;
 
 $showerrors = true;
@@ -36,6 +38,8 @@ if($local) {
 
 }
 else{
+
+    phpinfo();
 
     /* azure */
     $servername = "mundoaviacao.database.windows.net";

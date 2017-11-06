@@ -12,10 +12,8 @@ $name = $_POST['nome'] ;
 
 if(isset($name)){
 
-    $stmt = $conn->prepare("SELECT * from airplanes where nome  LIKE CONCAT('%', :name,'%')  or tipo LIKE CONCAT('%', :name,'%') or origem LIKE CONCAT('%', :name,'%') ");
+    $stmt = $conn->prepare("SELECT * from [mundoaviacao].[dbo].[airplanes]  where nome  LIKE CONCAT('%', :name,'%')  or tipo LIKE CONCAT('%', :name,'%') or origem LIKE CONCAT('%', :name,'%') ");
 
-      $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
     $res = $stmt->fetchAll(PDO::FETCH_ASSOC);

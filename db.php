@@ -39,7 +39,7 @@ if($local) {
 }
 else{
 
-    phpinfo();
+
 
     /* azure */
     $servername = "mundoaviacao.database.windows.net";

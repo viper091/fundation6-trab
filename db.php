@@ -7,7 +7,7 @@
  */
 
 
-$local = true;
+$local = false;
 
 $showerrors = true;
 $conn = null;

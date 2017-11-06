@@ -1,12 +1,5 @@
 <?php include 'db.php' ?>
-<?php
 
-    $stmt = $conn->prepare('select * from airplanes');
-    $stmt->execute();
-    $res = $stmt->fetchAll();
-    print_r($res);
-
-?>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>

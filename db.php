@@ -48,7 +48,7 @@ else{
     $dbname = "mundoaviacao";
 
     try{
-        $conn = new PDO(" sqlsrv:server=$servername;Database=$dbname",$username,
+        $conn = new PDO("sqlsrv:server=$servername;Database=$dbname",$username,
             $password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
 
     }

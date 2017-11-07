@@ -13,21 +13,23 @@
   </head>
   <body>
     <?php include 'nav.php' ?>
-<!--
-    <div class="reveal" id="exampleModal1" data-reveal>
-        <h1>Awesome. I Have It.</h1>
-        <p class="lead">Your couch. It is mine.</p>
-        <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p>
-    -->
-	<div class="callout">
+
+	<div id="barra" class="callout">
 		<!-- <h4>Ferramente de busca de aeronave</h4> -->
 
 		<div class="grid-container">
+
+            <div class="grid-x">
+
+
+                <div class="medium-1 medium-offset-11 cell">
+                    <button class="button" data-open="addAir">Adicionar aeroplano</button>
+
+                </div>
+
+
+
+            </div>
 			<div class="grid-x grid-padding-x">
 				<div class="medium-12 cell">
 					<label>Nome do Vetor ( Aeronave )
@@ -36,14 +38,16 @@
 
 				</div>
 
-				<div class="medium-1 cell large-offset-6 cell">
+				<div class="medium-1 cell large-offset-5">
 					<button id="buscar" type="button" class="button">Buscar</button>
 				</div>
-				<div class="medium-1 cell large-offset-11 cell">
-					<p style="font-size: 11px">Resultados  <b id="resultados"> 0 </b></p>
 
-				</div>
 			</div>
+            <div class="grid-x grid-padding-x">
+            <div class="medium-1 cell large-offset-11">
+                <p style="font-size: 11px">Resultados  <b id="resultados"> 0 </b></p>
+            </div>
+            </div>
 		</div>
 		<br><br>
 	</div>
@@ -78,6 +82,46 @@
 			</div>
 		</div>
 	</div>
+
+
+
+    <div class="reveal" id="addAirMsg" data-reveal>
+        <h2>Resultado</h2>
+        <hr>
+        <h5 id="addAirMsgh2">!</h5>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="reveal" id="addAir" data-reveal>
+        <h1>Aeroplano</h1>
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="medium-8 cell">
+                    <label>Nome
+                        <input type="text" id="ad_nome" placeholder="ex: Boeing 747">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Origem
+                        <input type="text" id="ad_origem" placeholder="ex: Brasil">
+                    </label>
+                </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                    <label>Tipo
+                        <input type="text" id="ad_tipo" placeholder="ex: Aviao de passageiros">
+                    </label>
+                </div>
+            </div>
+            <button id="addPlane" type="button" class="success button">Adicionar</button>
+        </div>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
 
 

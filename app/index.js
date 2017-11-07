@@ -7,21 +7,11 @@ var aaa;
 function clean(filename) {
     filename= filename.split(/[^a-zA-Z0-9\-\_\.]/gi).join('_');
     return filename;
-};
-function wikipediadata(id,nome){
+}
 
-    var wikiURL = "https://pt.wikipedia.org/w/api.php";
-    wikiURL += '?' + $.param({
-            'action' : 'opensearch',
-            'search' : nome,
-            'prop'  : 'revisions',
-            'rvprop' : 'content',
-            'rvsection' : '1',
-            'rvlimit' : '1',
-            'format' : 'json',
-            'limit' : 1
-        });
-     wikiURL = "https://en.wikipedia.org/w/api.php";
+function wikipediainfo(id, nome, api){
+
+    wikiURL = api;
     wikiURL += '?' + $.param({
             'action' : 'query',
             'titles' : nome,
@@ -36,11 +26,48 @@ function wikipediadata(id,nome){
         dataType: 'jsonp',
         async: true,
         success: function(data) {
-            for( var page in data.query.pages)
-            $('#'+id).html(data.query.pages[page].extract);
-            //alert(id);
-        //    alert(data.query.pages[page].extract);
-         ///   aaa = data;
+            for( var page in data.query.pages) {
+                info = data.query.pages[page].extract;
+                $('#' + id).html(info);
+            }
+
+
+
+        }
+    } );
+}
+function wikipediadata(id,nome){
+
+     wikiURL = "https://pt.wikipedia.org/w/api.php";
+    wikiURL += '?' + $.param({
+            'action' : 'query',
+            'titles' : nome,
+            'prop'  : 'extracts',
+            'explaintext' : '0',
+            'exintro' : '1',
+            'format' : 'json'
+        });
+    aaa = wikiURL;
+    $.ajax( {
+        url: wikiURL,
+        dataType: 'jsonp',
+        async: true,
+        success: function(data) {
+            for( var page in data.query.pages) {
+                var info = data.query.pages[page].extract;
+
+
+                if(info == null){
+
+                    wikipediainfo(id, nome,"https://en.wikipedia.org/w/api.php");
+                    //console.log(info);
+                }
+                else {
+                    $('#' + id).html(info);
+                }
+            }
+
+
 
         }
     } );
@@ -104,10 +131,10 @@ function showResults(response) {
         var img="";
         if(aero.img.length == 0) {
 
-            img = "<img id='"+nname+'s'+"' height='140' width='190' src='./imgs/airplanes/not_found.jpg'></img>";
+            img = "<img class='thumbnail' id='"+nname+'s'+"' height='140' width='190' src='./imgs/airplanes/not_found.jpg'></img>";
 
         }
-        else img =  "<img height='140' width='190' src='./imgs/airplanes/"+aero.img+"'></img>";
+        else img =  "<img class='thumbnail' height='140' width='190' src='./imgs/airplanes/"+aero.img+"'></img>";
         $('#resultado tbody').append(" <tr class='table-expand-row' data-open-details>" +
             "<td>"+img+"</td>" +
             "<td>"+aero.nome+"</td>" +
@@ -136,6 +163,37 @@ function showResults(response) {
 $(document).ready(function() {
 
 
+    $("#addPlane").click(function(){
+
+        var data = {
+            nome: $('#ad_nome').val(),
+            origem: $('#ad_origem').val(),
+            tipo: $('#ad_tipo').val()
+        };
+
+        $.ajax({
+            method:'post',
+            dataType:'json',
+            contentType: "application/json;charset=UTF-8",
+            url: 'dados.php',
+            async: true,
+            data: JSON.stringify(data),
+            success: function (response) {
+
+                var msg = '';
+              if(response.id){
+
+                    msg='Aeroplano adicionado ao banco de dados com sucesso ';
+              }
+              else msg=response.msg;
+
+
+                $('#addAirMsg').foundation('open');
+                $('#addAirMsgh2').text(msg);
+            }
+
+        });
+    });
 
 
     $('#buscar').click(function () {
@@ -200,11 +258,11 @@ function changeBackground(nome){
             for (var page in data.query.pages) {
                 if (page && data.query.pages[page].thumbnail) {
                    var imgurl = data.query.pages[page].thumbnail['source'];
-                    aaa =  data.query.pages[page];
-                   $('.callout').css('background','url(' + imgurl + ')' );
-                   $('.callout').css('background-size','cover');
-                    $('.callout').css('background-position','center');
-                    $('.callout').css('background-repeat','no-repeat');
+              //      aaa =  data.query.pages[page];
+                   $('#barra').css('background','url(' + imgurl + ')' );
+                   $('#barra').css('background-size','cover');
+                    $('#barra').css('background-position','center');
+                    $('#barra').css('background-repeat','no-repeat');
 
 
                 }

@@ -6,8 +6,13 @@
  * Time: 18:29
  */
 
+/*
+ *
+ * para facilitar a troca entre o servidor local e o azure
+ *
+ */
 
-$local = true;
+$local = false;
 
 $showerrors = true;
 $conn = null;

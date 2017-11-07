@@ -10,12 +10,21 @@
  *
  * para facilitar a troca entre o servidor local e o azure
  *
+ *
+ * quando o projeto estive em um servidor local, altera o valor de $local para true
+ *
  */
 
 $local = false;
 
 $showerrors = true;
 $conn = null;
+
+/*
+ *
+ * configure senha e usuario do banco de dados
+ *
+ */
 if($local) {
 
     /* local */
@@ -44,6 +53,10 @@ if($local) {
 }
 else{
 
+/*
+ *
+ *  usado apenas na fase final do proejto
+ */
 
 
     /* azure */

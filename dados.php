@@ -19,7 +19,7 @@ $tipo = $_POST['tipo'];
 
 
 if(isset($nome) && isset($origem) && isset($tipo) )  {
-    if(strlen($nome) == 0 && strlen($origem) == 0 && strlen($tipo) == 0){
+    if(strlen($nome) < 3 || strlen($origem) < 3 || strlen($tipo) < 3){
         $data = [
             'msg' => 'Ha campos vazios',
             'id' => 0
@@ -39,7 +39,7 @@ if(isset($nome) && isset($origem) && isset($tipo) )  {
     if($res == 0) {
 
 
-        $stmt = $conn->prepare("INSERT INTO airplanes values(0, :nome, :origem, '', :tipo) ");
+        $stmt = $conn->prepare("INSERT INTO airplanes(nome,origem,img,tipo) values(:nome, :origem,'', :tipo) ");
         $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
         $stmt->bindParam(':origem', $origem, PDO::PARAM_STR);
         $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);

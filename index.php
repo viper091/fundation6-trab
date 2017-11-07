@@ -14,7 +14,7 @@
   <body>
     <?php include 'nav.php' ?>
 
-	<div id="barra" class="callout">
+	<div id="barra" >
 		<!-- <h4>Ferramente de busca de aeronave</h4> -->
 
 		<div class="grid-container">
@@ -23,8 +23,11 @@
 
 
                 <div class="medium-1 medium-offset-11 cell">
+                   <!--         AGUARDANDO SISTEMA DE AUTENTICAÇÃO
+
                     <button class="button" data-open="addAir">Adicionar aeroplano</button>
 
+                    -->
                 </div>
 
 

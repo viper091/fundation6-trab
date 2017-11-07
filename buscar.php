@@ -9,7 +9,10 @@ $name = $_POST['nome'] ;
 
 
 
-
+/*
+ *  procura em 3 colunas(nome, tipo, origem) e retorna as aeronaves mais parecidas com o valor pesquisado
+ *
+ */
 if(isset($name)){
 
     $stmt = $conn->prepare("SELECT * from airplanes where nome  LIKE CONCAT('%', :name,'%')  or tipo LIKE CONCAT('%', :name2,'%') or origem LIKE CONCAT('%', :name3,'%') ");

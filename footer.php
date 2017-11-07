@@ -19,21 +19,17 @@
     
 </style>
 
-
-
-<footer class="callout">
-
-
+<footer>
     <div class="grid-container">
 
 
         <div class="grid-x">
 
-            <div class="small-1 cell">
+            <div class="small-1 cell medium-offset-1">
                 <p>Equipe:</p>
             </div>
 
-            <div class="medium-3 cell large-offset-1">
+            <div class="medium-3 cell ">
                 <img class="thumbnail avat" src="./imgs/avatar/pedroo.jpg" alt="Pedro H.">
                 <h4>Pedro Honorio</h4>
 
@@ -54,6 +50,5 @@
 
         </div>
     </div>
-
 
 </footer>

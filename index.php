@@ -12,8 +12,7 @@
       <link rel="stylesheet" href="app/style.css">
   </head>
   <body>
-      <p>aa</p>
-      <p>Teste1</p>
+      
     <?php include 'nav.php' ?>
 
 	<div id="barra" class="callout">

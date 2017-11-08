@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="app/style.css">
   </head>
   <body>
+      
     <?php include 'nav.php' ?>
 
 	<div id="barra" >

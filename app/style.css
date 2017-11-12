@@ -122,3 +122,15 @@ footer{
 
 
 }
+
+
+#buscarnomegif{
+    display: none;
+    margin-top: 25px;
+}
+#c_tipo ,#c_adicionar, #c_origem,
+#c_img, #c_sobre
+{
+
+    display: none;
+}

@@ -13,13 +13,12 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 $nome = $_POST['nome'] ;
 $origem = $_POST['origem'] ;
 $tipo = $_POST['tipo'];
+$sobre = $_POST['sobre'];
 
 
-
-
-
-if(isset($nome) && isset($origem) && isset($tipo) )  {
-    if(strlen($nome) < 3 || strlen($origem) < 3 || strlen($tipo) < 3){
+if(isset($nome) && isset($origem) && isset($tipo) && isset($sobre))  {
+    if(strlen($nome) < 3 || strlen($origem) < 3 || strlen($tipo) < 3 || strlen($sobre) < 3 )
+    {
         $data = [
             'msg' => 'Ha campos vazios',
             'id' => 0
@@ -39,10 +38,12 @@ if(isset($nome) && isset($origem) && isset($tipo) )  {
     if($res == 0) {
 
 
-        $stmt = $conn->prepare("INSERT INTO airplanes(nome,origem,img,tipo) values(:nome, :origem,'', :tipo) ");
+        $stmt = $conn->prepare("INSERT INTO airplanes(nome,origem,img,tipo,info) values(:nome, :origem,'', :tipo,:sobre) ");
         $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
         $stmt->bindParam(':origem', $origem, PDO::PARAM_STR);
         $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+        $stmt->bindParam(':sobre', $sobre, PDO::PARAM_STR);
+
         $res = $stmt->execute();
 
         $data = [

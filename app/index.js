@@ -38,6 +38,7 @@ function wikipediainfo(id, nome, api){
 }
 function wikipediadata(id,nome){
 
+    /*
      wikiURL = "https://pt.wikipedia.org/w/api.php";
     wikiURL += '?' + $.param({
             'action' : 'query',
@@ -71,7 +72,7 @@ function wikipediadata(id,nome){
 
         }
     } );
-
+*/
     wikiURL = "https://en.wikipedia.org/w/api.php";
     wikiURL += '?' + $.param({
             'action' : 'query',
@@ -143,7 +144,8 @@ function showResults(response) {
 
             "</tr>" +
            "<tr class='table-expand-row-content'>"+
-            "<td colspan='8' class='table-expand-row-nested' id='"+ nname  +"'></td>" +
+          //  "<td colspan='8' class='table-expand-row-nested' id='"+ nname  +"'></td>" +
+            "<td colspan='8' class='table-expand-row-nested'>"+aero.info+"</td>" +
             "</tr>"
 
         );
@@ -163,38 +165,15 @@ function showResults(response) {
 $(document).ready(function() {
 
 
-    $("#addPlane").click(function(){
+    function stopGif(){
 
-        var data = {
-            nome: $('#ad_nome').val(),
-            origem: $('#ad_origem').val(),
-            tipo: $('#ad_tipo').val()
-        };
-
-        $.ajax({
-            method:'post',
-            dataType:'json',
-            contentType: "application/json;charset=UTF-8",
-            url: 'dados.php',
-            async: true,
-            data: JSON.stringify(data),
-            success: function (response) {
-
-                var msg = '';
-              if(response.id){
-
-                    msg='Aeroplano adicionado ao banco de dados com sucesso ';
-              }
-              else msg=response.msg;
-
-
-                $('#addAirMsg').foundation('open');
-                $('#addAirMsgh2').text(msg);
-            }
-
+        $('[data-open-details]').click(function (e) {
+            e.preventDefault();
+            $(this).next().toggleClass('is-active');
+            $(this).toggleClass('is-active');
         });
-    });
-
+        $body.removeClass("loading");
+    }
 
     $('#buscar').click(function () {
 
@@ -211,23 +190,26 @@ $(document).ready(function() {
         }
         //var data =  "{'nome':'"+ $('#nome').val()  +"'}";
         console.log(data);
-        $.ajax({
+
+        var req= $.ajax({
             method:'post',
             dataType:'json',
             contentType: "application/json;charset=UTF-8",
             url: 'buscar.php',
             async: true,
             data: JSON.stringify(data),
-            success: function (response) {
-          //      location.reload();
-                //console.log(response);
-
-                showResults(response);
+            beforeSend: function() {
+                $body.addClass("loading");
             }
 
         });
 
-        return false;
+        req.done(function( response){
+
+            showResults(response);
+            stopGif();
+        })
+
     });
 
     $('#nome').keypress(function(e){
@@ -235,7 +217,7 @@ $(document).ready(function() {
 
             $('#buscar').click();
         }
-    });
+    })
 
 });
 
@@ -274,7 +256,7 @@ function changeBackground(nome){
     } );
 }
 
-
+/*
 $(document).on({
     ajaxStart: function() { $body.addClass("loading");    },
     ajaxStop: function() {
@@ -292,6 +274,8 @@ $(document).on({
 
 
 });
+
+*/
 /*
 $('tr').hover( function(){
     if( $(this).hasClass('jaf')) return false;

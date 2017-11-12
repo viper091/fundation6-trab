@@ -26,9 +26,10 @@
                 <div class="medium-1 medium-offset-11 cell">
                    <!--         AGUARDANDO SISTEMA DE AUTENTICAÇÃO
 
-                    <button class="button" data-open="addAir">Adicionar aeroplano</button>
+
 
                     -->
+                    <button class="button" data-open="addAir">Adicionar aeroplano</button>
                 </div>
 
 
@@ -101,26 +102,57 @@
     <div class="reveal" id="addAir" data-reveal>
         <h1>Aeroplano</h1>
         <div class="grid-container">
-            <div class="grid-x grid-padding-x">
-                <div class="medium-8 cell">
-                    <label>Nome
-                        <input type="text" id="ad_nome" placeholder="ex: Boeing 747">
-                    </label>
-                </div>
+            <div id="c_img" class="grid-x grid-padding-x">
                 <div class="medium-6 cell">
-                    <label>Origem
-                        <input type="text" id="ad_origem" placeholder="ex: Brasil">
+                    <label>Imagem atual
+                        <img id="ad_img" src="./imgs/airplanes/not_found.jpg"  width="200" height="150">
                     </label>
                 </div>
             </div>
+
             <div class="grid-x grid-padding-x">
-                <div class="medium-6 cell">
+
+                <div class="medium-7 cell">
+
+                    <label>Nome
+                        <input type="text" id="ad_nome" placeholder="ex: Boeing 747">
+
+                    </label>
+
+                </div>
+                <div id="buscarnomegif" class="small-1 cell">
+                    <img src="./imgs/ajax-loader.gif" width="16" height="16">
+                </div>
+
+                <div id="c_origem" class="medium-6 cell">
+                    <label>Origem
+                        <input type="text" id="ad_origem" placeholder="ex: Brasil">
+                    </label>
+
+                </div>
+
+                <div id='c_tipo' class="medium-6 cell">
                     <label>Tipo
                         <input type="text" id="ad_tipo" placeholder="ex: Aviao de passageiros">
                     </label>
                 </div>
             </div>
-            <button id="addPlane" type="button" class="success button">Adicionar</button>
+            <div id="c_sobre" class="grid-x grid-padding-x">
+                <div class="medium-12 cell">
+                    <label>
+                        Sobre
+                        <textarea  id="ad_sobre" rows="5"  placeholder="None"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div id="c_adicionar" class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                    <button id="addPlane" type="button" class="success button">Adicionar</button>
+                </div>
+
+            </div>
+
+
         </div>
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
@@ -138,6 +170,7 @@
     <script src="js/vendor/foundation.min.js"></script>
 
     <script src="app/index.js"></script>
+    <script src="app/add.js"></script>
 
 
 

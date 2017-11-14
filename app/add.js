@@ -6,6 +6,7 @@ var saaa;
 $(document).ready(function () {
     function wikipediainfo(id, nome, api){
 
+
         wikiURL = api;
         wikiURL += '?' + $.param({
                 'action' : 'query',
@@ -21,12 +22,15 @@ $(document).ready(function () {
             dataType: 'jsonp',
             async: true,
             success: function(data) {
+
+                console.log(this);
                 for( var page in data.query.pages) {
                     info = data.query.pages[page].extract;
                     if (info != null) {
                         $('#' + id).html(info);
 
                     }
+
                 }
 
 
@@ -97,7 +101,11 @@ $(document).ready(function () {
 
         var id = 'ad_sobre';
         wikipediainfoexists( nome, "https://pt.wikipedia.org/w/api.php", function (info) {
-            if(info.length > 0)
+           if(info != null)
+            oldvals = info;
+
+
+            if(info != null )
                 wikipediainfo(id, info, "https://pt.wikipedia.org/w/api.php");
             else
                 wikipediainfo(id, info, "https://en.wikipedia.org/w/api.php");
@@ -113,6 +121,7 @@ $(document).ready(function () {
     }
 
     function mostrarcampos(){
+
 
         $("#c_origem").fadeIn(1000);
         $("#c_tipo").fadeIn(1000);
@@ -222,7 +231,12 @@ $(document).ready(function () {
 
 
     });
+    $('#ad_nome').keypress(function(e){
+        if(e.which==13) {
 
+            $('#ad_nome').focusout();
+        }
+    })
 
     $("#addPlane").click(function(){
 
@@ -252,7 +266,13 @@ $(document).ready(function () {
                 }
                 else msg=response.msg;
 
+                $("#ad_origem").val('');
+                $("#ad_tipo").val('');
+                $("#ad_sobre").val('');
+                $("#ad_nome").val('');
 
+                escondercampos();
+                $("#buscarnomegif").hide();
                 $('#addAirMsg').foundation('open');
                 $('#addAirMsgh2').text(msg);
             }

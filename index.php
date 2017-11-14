@@ -29,7 +29,8 @@
 
 
                     -->
-                    <button class="button" data-open="addAir">Adicionar aeroplano</button>
+                    <button class="button" data-open="addAir">Adicionar aeronave</button>
+
                 </div>
 
 
@@ -37,7 +38,7 @@
             </div>
 			<div class="grid-x grid-padding-x">
 				<div class="medium-12 cell">
-					<label>Nome do Vetor ( Aeronave )
+					<label>O que deseja encontrar?
 						<input id="nome" type="text" placeholder="ex: Boeing 747">
 					</label>
 
@@ -100,7 +101,7 @@
     </div>
 
     <div class="reveal" id="addAir" data-reveal>
-        <h1>Aeroplano</h1>
+        <h1>Aeronave</h1>
         <div class="grid-container">
             <div id="c_img" class="grid-x grid-padding-x">
                 <div class="medium-6 cell">
@@ -160,7 +161,6 @@
     </div>
 
 
-
     <?php include 'footer.php'; ?>
 
     <div class="modal"><!-- Place at bottom of page --></div>
@@ -170,7 +170,7 @@
     <script src="js/vendor/foundation.min.js"></script>
 
     <script src="app/index.js"></script>
-    <script src="app/add.js"></script>
+   <script src="app/add.js"></script>
 
 
 

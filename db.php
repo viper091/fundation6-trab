@@ -15,7 +15,7 @@
  *
  */
 
-$local = false;
+$local = true;
 
 $showerrors = true;
 $conn = null;

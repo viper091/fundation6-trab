@@ -107,6 +107,7 @@ function wikipediadata(id,nome){
 
 function showResults(response) {
 
+
     $('#resultado tbody').find('tr,p').remove();
 //    $('#resultado').show();
     $('#nada_encontrado').hide();
@@ -163,7 +164,6 @@ function showResults(response) {
 
 
 $(document).ready(function() {
-
 
     function stopGif(){
 

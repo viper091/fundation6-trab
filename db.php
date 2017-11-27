@@ -11,13 +11,22 @@
  * para facilitar a troca entre o servidor local e o azure
  *
  *
+ *
  * quando o projeto estive em um servidor local, altera o valor de $local para true
  *
  */
+$hostName = $_SERVER['HTTP_HOST']; 
 
-$local = true;
+//muda automaticamente para a db do azure quando hospedado
+$local = false;
+$showerrors = false;
+if(strstr($hostName, "localhost") == true){
+	$local = true;
+	$showerrors = true;
+} 
 
-$showerrors = true;
+
+
 $conn = null;
 
 /*

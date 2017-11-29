@@ -20,14 +20,19 @@
 </style>
 
 <footer>
+
     <div class="grid-container">
 
-
+        <div class="grid-x">
+            <div class="medium-3 cell large-offset-5 ">
+                <h3>Equipe</h3>
+            </div>
+        </div>
         <div class="grid-x">
 
-            <div class="small-1 cell medium-offset-1">
-                <p>Equipe:</p>
-            </div>
+            <div class="small-1 cell">
+                <p></p>
+          </div>
 
             <div class="medium-3 cell ">
                 <img class="thumbnail avat" src="./imgs/avatar/pedroo.jpg" alt="Pedro H.">
@@ -47,8 +52,13 @@
                 <h4>Pedro Taparo</h4>
 
             </div>
+            <div class="medium-1 cell">
+                <img class="thumbnail avat" src="./imgs/avatar/roberta.jpg" alt="Roberta">
+                <h4>Roberta Fraleoni</h4>
 
+            </div>
         </div>
-    </div>
 
+
+    </div>
 </footer>
